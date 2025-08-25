@@ -4,14 +4,22 @@ package inheritance;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    //insert student1
+        Student stud1 = new Student("lisa", 12,"no2 amachi road", "FEMALE", 'A', 2);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+//        create teacher
+        Teacher teacher1 = new Teacher("john" , 30 , "rivers", "MALE", "IT", 30000 );
+
+        //display the student info
+        System.out.println("========================Student info ========================");
+        System.out.println(stud1.displayStudentInfo());
+
+        // Display Teacher info
+        System.out.println("=============== Teacher Info==================");
+        System.out.println(teacher1.displayTeacherInfo());
+
+        // Calculate Teacher salary with bonus
+        double bonus = 5000;
+        System.out.println("Teacher salary with bonus: " + teacher1.calculateSalary(bonus));
     }
 }
